@@ -1,7 +1,5 @@
-
 package Common;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Library {
@@ -11,11 +9,10 @@ public class Library {
         System.out.print(td + ": ");
         return Integer.parseInt(sc.nextLine());
     }
-    
+
     public String getString(String td) {
         Scanner sc = new Scanner(System.in);
         System.out.print(td + ": ");
         return sc.nextLine();
     }
-    
 }
