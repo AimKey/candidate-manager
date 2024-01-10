@@ -4,11 +4,19 @@ package Model;
  *
  * @author phamm
  */
-public class Candidate {
+public class Candidate  {
     protected String id;
     protected Info info;
     protected Contact contact;
     protected int candidateType;
+
+    public int getCandidateType() {
+        return candidateType;
+    }
+
+    public void setCandidateType(int candidateType) {
+        this.candidateType = candidateType;
+    }
     
     public Candidate(String id, Info info, Contact contact, int candidateType) {
         this.id = id;
@@ -28,7 +36,9 @@ public class Candidate {
         String res = info.fName + " " + info.lName + " | " + info.bDay + " | " + contact.address + " | " + contact.phone + " | " + contact.email + " | " + candidateType;
         return res;
     }
-    
-    
+
+    public String getFullName() {
+        return info.fName + " " + info.lName;
+    }
     
 }
